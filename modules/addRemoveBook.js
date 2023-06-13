@@ -1,6 +1,6 @@
 const BooksContainer = document.querySelector('.book-container');
 
-export const addNewBook = (book) => {
+const addNewBook = (book) => {
   const booksInfo = document.createElement('div');
   booksInfo.className = 'book-info';
   booksInfo.id = book.id;
@@ -16,8 +16,9 @@ export const addNewBook = (book) => {
   BooksContainer.appendChild(booksInfo);
 };
 
-export function removeBookFromPage(target) {
+const removeBookFromPage = (target) => {
   if (target.classList.contains('remove-book')) {
     target.parentElement.remove();
   }
-}
+};
+export { addNewBook, removeBookFromPage };
